@@ -1,0 +1,59 @@
+
+1. What is Polymorphism ? Try to explain in Mandarin.
+
+將相同的訊息傳遞給不同的物件，進而引發出不同的行為反應。
+例如，狗和雞都有「叫()」這一方法，但是呼叫狗的「叫()」，狗會吠叫；呼叫雞的「叫()」，雞則會啼叫。
+
+
+
+2. Here are the 7 important lifecycle methods of an Activity :
+   Try to explain when are they called during the lifecycle of Activity.
+
+i. onCreate(): 在初始化程式後會呼叫此方法,在整個activity中僅會執行一次。
+ii. onStart(): 當背景轉換至前景畫面時呼叫此方法。
+iii. onResume(): 畫面能夠使用者互動時呼叫此方法，此階段記錄使用者對activity的操作。
+iv. onPause(): User即將中斷使用時會呼叫此方法。例如操作APP時，臨時朋友打電話來,縮小視窗或點選開啟其他app的情況。
+v. onStop(): APP activity不顯示於螢幕上時呼叫此方法。
+vi. onDestroy(): 當User關閉activity時呼叫此方法。
+vii. onRestart(): 當User把background的視窗重新開啟時呼叫此方法。
+
+
+3. What is the Android Jetpack ?
+
+係Google推出的一套由function library、tools、architecture guide的組件，為了增進
+developers開發Android app的速度所推出。
+
+4. Key concepts in Android Development : Try to research them and explain briefly.
+
+i. Activity: 能與User互動，連結設計好的介面與程式碼，讓User執行特定功能。
+
+ii. Service: 提供在background長時間執行功能，於不需要與User互動時使用。
+
+iii. Content Provider: 能讓APP存取其他應用程式資料，define安全性和如何封裝資料。
+
+iv. Broadcast Receiver: 用來接收來自其他APP程式或Android發出的廣播。
+
+v. Notification: 能夠讓APP於本身UI以外的地方跳出該應用程式資訊。
+
+vi. Runtime Permission:在User執行程式後決定該程式能否取得存取安全性資料的權限，
+或是連結其他功能的軟體，例如存取 google map上的位置或連結電話聯絡資訊。
+
+vii. ANR: Application Not Responding 指main thread使用太久導致main thread無法更新時，
+          就會跳此訊息，讓User決定關閉該程式或等待程式繼續跑。
+
+viii. OOM: out of memory 當記憶體空間不足，程式產生新物件時的錯誤。
+
+ix. Exception:  有時APP執行會出現例外狀況。例如原本要read檔案，然而target file不存在，
+                這個程式就會發生error，而為了避免error，我們預寫例外狀況發生時
+                該執行的程式碼，避免程式crash。
+
+x. Material Design: 一套google 為開發者提出的設計原則。
+                    例如現實中的物體存在表面和陰影表面和陰影，UI 元素需各自分層，都要表現出層次感。 
+                    運用陰影來表現不同表面間的關係，協助引導視覺焦點及建立階層概念。
+                    使用的圖像必須是滿版圖片。 
+
+5. What is Coroutines ? Why we use it? Try to explain in Mandarin.
+
+可讓多個process同時執行，比如說loading畫面的資料且畫面update要待資料download完畢
+才執行時，User就會發現畫面lag，coroutine就決定何時要其它的process佔用處理器。
+
